@@ -187,7 +187,7 @@ describe_('React Developer Tools integration', () => {
 		expect(renderer.Reconciler.mountComponent).to.have.been.calledWith(domInstance);
 	});
 
-	// TODO: This test needs to be rechecked. Previously it didn't call the
+	// TODO: This test needs to be rechecked. Previously it didn't call the id:6
 	// assertion correctly and would therefore always pass
 	it.skip('notifies dev tools when a component update adds DOM children', () => {
 		const node = render(h(MultiChild, {initialCount: 2}), container);
