@@ -344,7 +344,7 @@ describe('Lifecycle methods', () => {
 			expect(Foo.getDerivedStateFromProps).to.have.been.called;
 		});
 
-		// NOTE: Difference from React
+		// NOTE: Difference from React id:4
 		// React v16.3.2 warns if undefined if returned from getDerivedStateFromProps
 		it('should NOT modify state if undefined is returned', () => {
 			class Foo extends Component {
@@ -431,7 +431,7 @@ describe('Lifecycle methods', () => {
 			]);
 		});
 
-		// TODO: Investigate this test:
+		// TODO: Investigate this test: id:1
 		// [should not override state with stale values if prevState is spread within getDerivedStateFromProps](https://github.com/facebook/react/blob/25dda90c1ecb0c662ab06e2c80c1ee31e0ae9d36/packages/react-dom/src/__tests__/ReactComponentLifeCycle-test.js#L1035)
 
 		it('should be passed next props and state', () => {
@@ -457,7 +457,7 @@ describe('Lifecycle methods', () => {
 					propsArg = {...props};
 					stateArg = {...state};
 
-					// NOTE: Don't do this in real production code!
+					// NOTE: Don't do this in real production code! id:9
 					// https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 					return {
 						value: state.value + 1
@@ -624,7 +624,7 @@ describe('Lifecycle methods', () => {
 					});
 				}
 				static getDerivedStateFromProps(props, state) {
-					// NOTE: Don't do this in real production code!
+					// NOTE: Don't do this in real production code! id:8
 					// https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 					return {
 						value: state.value + 1
@@ -920,7 +920,7 @@ describe('Lifecycle methods', () => {
 					});
 				}
 				static getDerivedStateFromProps(props, state) {
-					// NOTE: Don't do this in real production code!
+					// NOTE: Don't do this in real production code! id:11
 					// https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 					return {
 						value: state.value + 1
@@ -1248,7 +1248,7 @@ describe('Lifecycle methods', () => {
 					});
 				}
 				static getDerivedStateFromProps(props, state) {
-					// NOTE: Don't do this in real production code!
+					// NOTE: Don't do this in real production code! id:10
 					// https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 					return {
 						value: state.value + 1
